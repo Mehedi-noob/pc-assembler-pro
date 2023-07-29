@@ -17,6 +17,7 @@ export const authOptions = {
   ],
 
   pages: {
+    // signIn: "𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐚𝐩𝐩𝐯𝐞𝐫𝐜𝐞𝐥𝐚𝐩𝐩/𝐥𝐨𝐠𝐢𝐧",
     signIn: "/login",
   },
 };

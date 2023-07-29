@@ -13,7 +13,7 @@ import Link from 'next/link';
 const items = [
   {
     label: (
-      <Link target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+      <Link href="/categories/Processor" rel="noopener noreferrer">
         CPU / Processor
       </Link>
     ),
@@ -21,7 +21,7 @@ const items = [
   },
   {
     label: (
-      <Link target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+      <Link href="/categories/Motherboard" rel="noopener noreferrer">
         Motherboard
       </Link>
     ),
@@ -29,7 +29,7 @@ const items = [
   },
   {
     label: (
-      <Link target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+      <Link href="/categories/RAM" rel="noopener noreferrer">
         RAM
       </Link>
     ),
@@ -37,7 +37,7 @@ const items = [
   },
   {
     label: (
-      <Link target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+      <Link href="/categories/Power Supply Unit" rel="noopener noreferrer">
         Power Supply Unit
       </Link>
     ),
@@ -45,7 +45,7 @@ const items = [
   },
   {
     label: (
-      <Link target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+      <Link href="/categories/Storage Device" rel="noopener noreferrer">
         Storage Device
       </Link>
     ),
@@ -53,7 +53,7 @@ const items = [
   },
   {
     label: (
-      <Link target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+      <Link href="/categories/Monitor" rel="noopener noreferrer">
         Monitor
       </Link>
     ),
@@ -61,7 +61,7 @@ const items = [
   },
   {
     label: (
-      <Link target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+      <Link href="/categories/Others" rel="noopener noreferrer">
         Others
       </Link>
     ),

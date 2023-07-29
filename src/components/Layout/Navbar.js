@@ -13,7 +13,7 @@ const Navbar = () => {
   return(
     <Layout className="">
       <Header className='flex justify-between'>
-        <div className="text-2xl font-bold pt-4" style={{ color: 'white' }}> PC Builder</div>
+        <div  className="text-2xl font-bold pt-4" style={{ color: 'white' }}> <Link href="/"> PC Assembler</Link> </div>
         {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
           <Menu.Item key="1" icon={<HomeOutlined />}>Home</Menu.Item>
           <Menu.Item key="2" icon={<UserOutlined />}>Profile</Menu.Item>
@@ -41,6 +41,11 @@ const Navbar = () => {
               <items>Login</items>
             </Link>
           )}
+        </div>
+        <div>
+          <Link style={{ textDecoration: "none", color: "white" }} href='/pcBuilder'>
+            PC builder
+          </Link>
         </div>
       </Header>
     </Layout>

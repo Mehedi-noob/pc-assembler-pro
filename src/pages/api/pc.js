@@ -17,15 +17,20 @@ async function run(req, res) {
     await client.connect();
     // Send a ping to confirm a successful connection
     const productsCollection = client.db("pc_assembler").collection("accessories");
+    const categoriesCollection = client.db("pc_assembler").collection("categories");
 
     if (req.method === "GET") {
       const query = req.query;
       let products;
       if(query){
-        if (query._id) {
-          query._id = new ObjectId(query._id);
+        if(query.categories){
+          products = await categoriesCollection.find({}).toArray();
+        }else{
+          if (query._id) {
+            query._id = new ObjectId(query._id);
+          }
+           products = await productsCollection.find(query).toArray();
         }
-         products = await productsCollection.find(query).toArray();
       }else{
 
          products = await productsCollection.find({}).toArray();
