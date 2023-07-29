@@ -61,7 +61,7 @@ export async function getServerSideProps() {
   //   { id: 'monitor', name: 'Monitor' },
   // ];
 
-  const response = await fetch(`http://localhost:3000/api/pc?categories=1`);
+  const response = await fetch(`https://pc-assember-pro.vercel.app/api/pc?categories=1`);
   const data = await response.json();
   const categories = data.data;
 

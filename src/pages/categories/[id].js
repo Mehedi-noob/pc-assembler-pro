@@ -42,7 +42,7 @@ export default Component;
 export async function getServerSideProps({ params }) {
   const { id } = params;
 
-  const response = await fetch(`http://localhost:3000/api/pc?Category=${id}`);
+  const response = await fetch(`https://pc-assember-pro.vercel.app/api/pc?Category=${id}`);
   const data = await response.json();
   const products = data.data;
 

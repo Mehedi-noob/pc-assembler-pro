@@ -10,7 +10,7 @@ const Featured = ({randomProducts}) => {
 
   // useEffect(() => {
   //   Fetch all products from the API endpoint
-  //   fetch("http://localhost:3000/api/pc")
+  //   fetch("https://pc-assember-pro.vercel.app/api/pc")
   //     .then((response) => response.json())
   //     .then((data) => {
   //       // Randomly select 6 products from the fetched data
@@ -24,7 +24,7 @@ const Featured = ({randomProducts}) => {
 
   //   const fetchData = async () => {
   //     try {
-  //       const response = await fetch("http://localhost:3000/api/pc");
+  //       const response = await fetch("https://pc-assember-pro.vercel.app/api/pc");
   //       const data = await response.json();
   //       const randomProducts = getRandomProducts(data.data, 6);
   //       console.log("data fetching complete", data.data);
@@ -73,7 +73,7 @@ const Featured = ({randomProducts}) => {
 export default Featured;
 
 export const getStaticProps = async () => {
-  const response = await fetch("http://localhost:3000/api/pc");
+  const response = await fetch("https://pc-assember-pro.vercel.app/api/pc");
   const data = await response.json();
   const randomProducts = getRandomProducts(data.data, 6);
   console.log("data fetching complete", data.data);
