@@ -5,6 +5,9 @@ const getRandomProducts = (data, count) => {
   return shuffledData.slice(0, count);
 };
 
+const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "";
+
+
 const HomePage = ({ randomProducts, uniqueCategories }) => {
 
   return (
@@ -57,12 +60,18 @@ const HomePage = ({ randomProducts, uniqueCategories }) => {
 export default HomePage;
 
 export const getStaticProps = async () => {
-  const response = await fetch("http://localhost:3000/api/pc");
+  const response = await fetch(`${apiBaseUrl}/api/pc`);
+  if (!response.ok) {
+    throw new Error("Failed to fetch data from the server");
+  }
   const data = await response.json();
   const randomProducts = getRandomProducts(data.data, 6); /* data.data */
   console.log("data fetching complete", data.data);
 
-  const response2 = await fetch(`http://localhost:3000/api/pc?categories=1`);
+  const response2 = await fetch(`${apiBaseUrl}/api/pc?categories=1`);
+  if (!response2.ok) {
+    throw new Error("Failed to fetch data from the server");
+  }
   const data2 = await response2.json();
   const uniqueCategories = data2.data;
   return {
