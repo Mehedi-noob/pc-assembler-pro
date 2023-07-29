@@ -59,7 +59,7 @@ const HomePage = ({ randomProducts, uniqueCategories }) => {
 
 export default HomePage;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const response = await fetch(`${apiBaseUrl}/api/pc`);
   if (!response.ok) {
     throw new Error("Failed to fetch data from the server");
