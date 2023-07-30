@@ -1,3 +1,4 @@
+import Banner from "@/components/HomePage/Banner";
 import Link from "next/link";
 
 const getRandomProducts = (data, count) => {
@@ -12,6 +13,7 @@ const HomePage = ({ randomProducts, uniqueCategories }) => {
 
   return (
     <div className="grid gap-4">
+      <Banner></Banner>
       <h1 className="text-2xl font-bold text-center">Featured Products</h1>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {randomProducts?.map((product) => (
@@ -37,7 +39,7 @@ const HomePage = ({ randomProducts, uniqueCategories }) => {
           </div>
         ))}
       </div>
-      <section className="w-11/12 mx-auto">
+      <section id="featured-cat" className="w-11/12 mx-auto">
         <h1 className="text-3xl font-bold mb-4">Featured Categories</h1>
         <div className="featured-products grid grid-cols-1 md:grid-cols-3 gap-5">
           {uniqueCategories.map((category) => (
